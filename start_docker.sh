@@ -5,4 +5,4 @@
 # Author: Daniel Schneider
 # Date: 01/03/2024
 
-docker run -it --privileged -v /home/danielschneider/Dokumente/ADAS/ffmpeg:/FFVideoStamp/ -v /dev:/dev ffvideostamp:1.0
+docker run -it --privileged -v /home/usr/daniel/FFVideoStamp:/FFVideoStamp/ -v /dev:/dev ffvideostamp:1.0

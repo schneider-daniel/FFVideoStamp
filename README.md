@@ -44,7 +44,6 @@ If ffmpeg is not installed on the system or not all used packages are built, use
 
 I tested it with commit `33698ef891bac5f09fe0ec26af9b24322d7594ce`
 
-
 ### Installation
 
 To build the docker container simply run `./build_docker.sh`
@@ -53,6 +52,12 @@ To build the docker container simply run `./build_docker.sh`
 
 Start the docker container with `./start_docker.sh`. Ensure that the mount in it is adapted accordingly.
 To evaluate the difference between the displayed time on the screen and the recorded time stamp, `chrono.sh` is your friend. This script simply displays the epoch time with maximal framerate on the screen. You can record it directly and compare the time stamps later on.
+
+## Video settings
+
+If you are intersted in processing the video whilst recording, you can apply the video filter in `record.sh`. Video cropping for instance is possible by means of `-vf "crop=in_w:in_h-40:0:40"`
+
+Thus: `ffmpeg -f v4l2 -i /dev/video$VIDEO_DEVICE -c:v libx264 -preset ultrafast -use_wallclock_as_timestamps 1 -fflags +genpts -metadata date="${EPOCHREALTIME/[^0-9]/}" -vf "crop=in_w:in_h-40:0:40" $OUTPUT_FILE 2>/dev/null`
 
 ## License
 

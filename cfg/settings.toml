@@ -1,0 +1,9 @@
+[information]
+version = 1.0
+author = 'Daniel Schneider'
+
+[settings]
+extract_png = false # Enables image extraction form video
+
+[camera]
+format = '.mp4'

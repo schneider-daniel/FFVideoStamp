@@ -1,0 +1,3 @@
+[submodule "FFVideoStamp-ros/src/aliencontrol"]
+	path = FFVideoStamp-ros/src/aliencontrol
+	url = https://github.com/schneider-daniel/aliencontrol.git

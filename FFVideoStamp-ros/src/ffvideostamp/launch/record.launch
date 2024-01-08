@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+  <!-- Start FFVideoStamp via aliencontrol -->
+  <node pkg="aliencontrol" type="aliencontrol" name="aliencontrol">
+    <param name="cmd" value="/storage/FFVideoStamp/record.sh"/>
+  </node>
+</launch>

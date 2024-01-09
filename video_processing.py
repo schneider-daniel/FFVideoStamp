@@ -15,8 +15,8 @@ import src.video_timer as vt
 from src import conf
 p_ = conf.load_toml()
 
-storage_path = r"/FFVideoStamp"
-slug = ""
+storage_path = os.getcwd()
+slug = "uncovered-bat-25"
 path = os.path.join(storage_path, slug)
 
 # Get all video files in provided path
